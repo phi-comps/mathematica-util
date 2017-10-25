@@ -1,0 +1,465 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19017,        457]
+NotebookOptionsPosition[     18462,        436]
+NotebookOutlinePosition[     18817,        452]
+CellTagsIndexPosition[     18774,        449]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"interactive", " ", "projection", " ", "graphic"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"size", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Slider", "[", 
+    RowBox[{
+     RowBox[{"Dynamic", "[", "d", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "4"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Slider", "[", 
+    RowBox[{
+     RowBox[{"Dynamic", "[", "r", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "20"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Dynamic", "[", 
+    RowBox[{"Show", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Plot3D", "[", 
+       RowBox[{
+        RowBox[{"Sqrt", "[", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["y", "2"], "-", 
+           SuperscriptBox["x", "2"]}], 
+          RowBox[{
+           SuperscriptBox["d", "4"], "-", 
+           RowBox[{"4", 
+            SuperscriptBox["d", "2"]}], "-", "4"}]], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"y", ",", 
+          RowBox[{"-", "size"}], ",", "size"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"-", "size"}], ",", "size"}], "}"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "size"}], ",", "size"}], "}"}]}], ",", 
+        RowBox[{"BoxRatios", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", " ", "1", ",", " ", "1"}], "}"}]}], ",", 
+        RowBox[{"Axes", "\[Rule]", "True"}], ",", " ", 
+        RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+        RowBox[{"ClippingStyle", "\[Rule]", "None"}], ",", 
+        RowBox[{"Mesh", "\[Rule]", "None"}], ",", 
+        RowBox[{"PlotStyle", "\[Rule]", "Cyan"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Plot3D", "[", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"Sqrt", "[", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["y", "2"], "-", 
+            SuperscriptBox["x", "2"]}], 
+           RowBox[{
+            SuperscriptBox["d", "4"], "-", 
+            RowBox[{"4", 
+             SuperscriptBox["d", "2"]}], "-", "4"}]], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"y", ",", 
+          RowBox[{"-", "size"}], ",", "size"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"-", "size"}], ",", "size"}], "}"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "size"}], ",", "size"}], "}"}]}], ",", 
+        RowBox[{"ClippingStyle", "\[Rule]", "None"}], ",", 
+        RowBox[{"Mesh", "\[Rule]", "None"}], ",", 
+        RowBox[{"PlotStyle", "\[Rule]", "Cyan"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Plot3D", "[", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"y", "-", "x"}], "r"], ",", 
+        RowBox[{"{", 
+         RowBox[{"y", ",", 
+          RowBox[{"-", "size"}], ",", "size"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"-", "size"}], ",", "size"}], "}"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "size"}], ",", "size"}], "}"}]}], ",", 
+        RowBox[{"ClippingStyle", "\[Rule]", "None"}], ",", 
+        RowBox[{"Mesh", "\[Rule]", "None"}], ",", 
+        RowBox[{"PlotStyle", "\[Rule]", 
+         RowBox[{"Directive", "[", 
+          RowBox[{"Gray", ",", 
+           RowBox[{"Opacity", "[", "0.5", "]"}]}], "]"}]}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Graphics3D", "[", 
+       RowBox[{"{", 
+        RowBox[{"Black", ",", 
+         RowBox[{"Thickness", "[", "0.0075", "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"InfiniteLine", "[", 
+          RowBox[{"{", " ", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "0"}], "}"}]}], " ", "}"}], "]"}]}], 
+        " ", 
+        RowBox[{"(*", " ", 
+         RowBox[{"the", " ", "point", " ", "at", " ", "infinity"}], " ", 
+         "*)"}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Graphics3D", "[", 
+       RowBox[{"{", 
+        RowBox[{"Black", ",", 
+         RowBox[{"Thickness", "[", "0.0075", "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"InfiniteLine", "[", 
+          RowBox[{"{", " ", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", 
+              RowBox[{"-", "r"}], ",", "1"}], "}"}]}], " ", "}"}], "]"}]}], 
+        " ", 
+        RowBox[{"(*", " ", 
+         RowBox[{"choose", " ", "r"}], " ", "*)"}], "\[IndentingNewLine]", 
+        "}"}], "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Graphics3D", "[", 
+       RowBox[{"{", 
+        RowBox[{"Red", ",", 
+         RowBox[{"Thickness", "[", "0.0075", "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"InfiniteLine", "[", 
+          RowBox[{"{", " ", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["d", "4"], "-", 
+               RowBox[{"4", 
+                SuperscriptBox["d", "2"]}], "-", "4", "+", 
+               SuperscriptBox["r", "2"]}], ",", 
+              RowBox[{
+               SuperscriptBox["d", "4"], "-", 
+               RowBox[{"4", 
+                SuperscriptBox["d", "2"]}], "-", "4", "-", 
+               SuperscriptBox["r", "2"]}], ",", 
+              RowBox[{"2", "r"}]}], "}"}]}], " ", "}"}], "]"}]}], " ", 
+        RowBox[{"(*", " ", "intersection", " ", "*)"}], "\[IndentingNewLine]",
+         "}"}], "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Graphics3D", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Opacity", "[", "0.5", "]"}], ",", 
+         RowBox[{"EdgeForm", "[", "]"}], ",", 
+         RowBox[{"InfinitePlane", "[", 
+          RowBox[{"{", " ", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], " ", "}"}], "]"}]}], 
+        "}"}], "]"}], "\[IndentingNewLine]", ",", 
+      RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}], "]"}]}]}]], "Input",\
+
+ CellChangeTimes->{{3.7177748561843653`*^9, 3.717774861056409*^9}, {
+   3.717774891169964*^9, 3.717774924753408*^9}, {3.717774963215868*^9, 
+   3.7177750274653683`*^9}, {3.717775107874674*^9, 3.717775247575862*^9}, {
+   3.717775279974163*^9, 3.717775343405612*^9}, {3.717775409020821*^9, 
+   3.717775459123045*^9}, {3.717775492394055*^9, 3.717775549892475*^9}, {
+   3.7177847991191463`*^9, 3.717784863854031*^9}, 3.717784901645557*^9, {
+   3.717784970388034*^9, 3.717784980719227*^9}, {3.717785039635292*^9, 
+   3.717785094751217*^9}, {3.717785130672814*^9, 3.717785151240337*^9}, {
+   3.7177852479335337`*^9, 3.7177852809056873`*^9}, {3.717785338749593*^9, 
+   3.71778535963909*^9}, {3.717785451617421*^9, 3.717785475864834*^9}, {
+   3.7177855421718616`*^9, 3.717785550235237*^9}, {3.71778559515615*^9, 
+   3.717785596458127*^9}, {3.7177856863695393`*^9, 3.7177857291525793`*^9}, {
+   3.717785789997965*^9, 3.71778584293384*^9}, {3.7177859218200493`*^9, 
+   3.717786016970543*^9}, {3.717786069946012*^9, 3.717786125129743*^9}, {
+   3.7177861564681263`*^9, 3.7177861570643663`*^9}, {3.7177862523491173`*^9, 
+   3.717786259303155*^9}, {3.717786305619549*^9, 3.717786313036105*^9}, {
+   3.717786409867281*^9, 3.717786466434753*^9}, {3.71778656507156*^9, 
+   3.717786598783927*^9}, {3.717786652402431*^9, 3.7177867362190447`*^9}, {
+   3.717786766892754*^9, 3.717786877026279*^9}, {3.717786948680973*^9, 
+   3.717787050261344*^9}, {3.717787120614382*^9, 3.717787121355399*^9}, {
+   3.7177871763923407`*^9, 3.7177871788947067`*^9}, {3.717787235429655*^9, 
+   3.717787259855876*^9}, {3.7177873113615017`*^9, 3.7177873200718117`*^9}, {
+   3.717787379634062*^9, 3.7177873803574667`*^9}, {3.7177874352171783`*^9, 
+   3.7177874981536703`*^9}, {3.7177876054439497`*^9, 3.717787642149494*^9}, {
+   3.717787687455223*^9, 3.717787819043111*^9}, 3.717788041903954*^9, {
+   3.717788088863511*^9, 3.717788105502458*^9}, {3.717788135962219*^9, 
+   3.717788138120058*^9}, {3.717788790143669*^9, 
+   3.717788796614291*^9}},ExpressionUUID->"8c32fcee-4b82-4345-bbc5-\
+a0f1c749ce11"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Exports", " ", "a", " ", "video", " ", "to", " ", "this", " ", 
+    RowBox[{"(", "v", ")"}], " ", "directory"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+    "SetDirectory", "[", "\"\</Users/peterillig/Desktop/comp\>\"", "]"}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"VID", "=", 
+     RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"size", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"d", "=", "1.6"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Do", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"AppendTo", "[", 
+        RowBox[{"VID", ",", 
+         RowBox[{"Rasterize", "[", 
+          RowBox[{
+           RowBox[{"Show", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"Plot3D", "[", 
+              RowBox[{
+               RowBox[{"Sqrt", "[", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["y", "2"], "-", 
+                  SuperscriptBox["x", "2"]}], 
+                 RowBox[{
+                  SuperscriptBox["d", "4"], "-", 
+                  RowBox[{"4", 
+                   SuperscriptBox["d", "2"]}], "-", "4"}]], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"y", ",", 
+                 RowBox[{"-", "size"}], ",", "size"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"x", ",", 
+                 RowBox[{"-", "size"}], ",", "size"}], "}"}], ",", 
+               RowBox[{"PlotRange", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "size"}], ",", "size"}], "}"}]}], ",", 
+               RowBox[{"BoxRatios", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"1", ",", " ", "1", ",", " ", "1"}], "}"}]}], ",", 
+               RowBox[{"Axes", "\[Rule]", "True"}], ",", " ", 
+               RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+               RowBox[{"ClippingStyle", "\[Rule]", "None"}], ",", 
+               RowBox[{"Mesh", "\[Rule]", "None"}], ",", 
+               RowBox[{"PlotStyle", "\[Rule]", "Cyan"}]}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Plot3D", "[", 
+              RowBox[{
+               RowBox[{"-", 
+                RowBox[{"Sqrt", "[", 
+                 FractionBox[
+                  RowBox[{
+                   SuperscriptBox["y", "2"], "-", 
+                   SuperscriptBox["x", "2"]}], 
+                  RowBox[{
+                   SuperscriptBox["d", "4"], "-", 
+                   RowBox[{"4", 
+                    SuperscriptBox["d", "2"]}], "-", "4"}]], "]"}]}], ",", 
+               RowBox[{"{", 
+                RowBox[{"y", ",", 
+                 RowBox[{"-", "size"}], ",", "size"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"x", ",", 
+                 RowBox[{"-", "size"}], ",", "size"}], "}"}], ",", 
+               RowBox[{"PlotRange", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "size"}], ",", "size"}], "}"}]}], ",", 
+               RowBox[{"ClippingStyle", "\[Rule]", "None"}], ",", 
+               RowBox[{"Mesh", "\[Rule]", "None"}], ",", 
+               RowBox[{"PlotStyle", "\[Rule]", "Cyan"}]}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Plot3D", "[", 
+              RowBox[{
+               FractionBox[
+                RowBox[{"y", "-", "x"}], "r"], ",", 
+               RowBox[{"{", 
+                RowBox[{"y", ",", 
+                 RowBox[{"-", "size"}], ",", "size"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"x", ",", 
+                 RowBox[{"-", "size"}], ",", "size"}], "}"}], ",", 
+               RowBox[{"PlotRange", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "size"}], ",", "size"}], "}"}]}], ",", 
+               RowBox[{"ClippingStyle", "\[Rule]", "None"}], ",", 
+               RowBox[{"Mesh", "\[Rule]", "None"}], ",", 
+               RowBox[{"PlotStyle", "\[Rule]", 
+                RowBox[{"Directive", "[", 
+                 RowBox[{"Gray", ",", 
+                  RowBox[{"Opacity", "[", "0.5", "]"}]}], "]"}]}]}], "]"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"Graphics3D", "[", 
+              RowBox[{"{", 
+               RowBox[{"Black", ",", 
+                RowBox[{"Thickness", "[", "0.0075", "]"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"InfiniteLine", "[", 
+                 RowBox[{"{", " ", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", "1", ",", "0"}], "}"}]}], " ", "}"}], 
+                 "]"}]}], " ", 
+               RowBox[{"(*", " ", 
+                RowBox[{"the", " ", "point", " ", "at", " ", "infinity"}], 
+                " ", "*)"}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Graphics3D", "[", 
+              RowBox[{"{", 
+               RowBox[{"Black", ",", 
+                RowBox[{"Thickness", "[", "0.0075", "]"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"InfiniteLine", "[", 
+                 RowBox[{"{", " ", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"-", "r"}], ",", "1"}], "}"}]}], " ", "}"}], 
+                 "]"}]}], " ", 
+               RowBox[{"(*", " ", 
+                RowBox[{"choose", " ", "r"}], " ", "*)"}], 
+               "\[IndentingNewLine]", "}"}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Graphics3D", "[", 
+              RowBox[{"{", 
+               RowBox[{"Red", ",", 
+                RowBox[{"Thickness", "[", "0.0075", "]"}], ",", 
+                RowBox[{"a", "\[IndentingNewLine]", 
+                 RowBox[{"InfiniteLine", "[", 
+                  RowBox[{"{", " ", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["d", "4"], "-", 
+                    RowBox[{"4", 
+                    SuperscriptBox["d", "2"]}], "-", "4", "+", 
+                    SuperscriptBox["r", "2"]}], ",", 
+                    RowBox[{
+                    SuperscriptBox["d", "4"], "-", 
+                    RowBox[{"4", 
+                    SuperscriptBox["d", "2"]}], "-", "4", "-", 
+                    SuperscriptBox["r", "2"]}], ",", 
+                    RowBox[{"2", "r"}]}], "}"}]}], " ", "}"}], "]"}]}]}], " ", 
+               RowBox[{"(*", " ", "intersection", " ", "*)"}], 
+               "\[IndentingNewLine]", "}"}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Graphics3D", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Opacity", "[", "0.5", "]"}], ",", 
+                RowBox[{"EdgeForm", "[", "]"}], ",", 
+                RowBox[{"InfinitePlane", "[", 
+                 RowBox[{"{", " ", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], " ", "}"}], 
+                 "]"}]}], "}"}], "]"}], "\[IndentingNewLine]", ",", 
+             RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}], ",", 
+           RowBox[{"RasterSize", "\[Rule]", "1000"}]}], "]"}]}], "]"}], ";"}],
+       "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+      RowBox[{"{", 
+       RowBox[{"r", ",", "1.5", ",", "10", ",", 
+        FractionBox["1", "16"]}], "}"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"AbsoluteTiming", "[", 
+    RowBox[{"Export", "[", 
+     RowBox[{"\"\<projection.mov\>\"", ",", "VID"}], "]"}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.7177878626324587`*^9, 3.717787876961027*^9}, {
+   3.717787995234461*^9, 3.717788012404869*^9}, {3.717788152670676*^9, 
+   3.717788230965376*^9}, {3.71778831283213*^9, 3.717788313088746*^9}, {
+   3.717788388293714*^9, 3.7177883933272877`*^9}, {3.71778845207169*^9, 
+   3.7177884534280787`*^9}, {3.717788704278757*^9, 3.717788705603695*^9}, {
+   3.717788748373369*^9, 3.7177888088254547`*^9}, 
+   3.717868520401804*^9},ExpressionUUID->"9995d2e3-7b2c-43a2-a413-\
+d1ec580ec305"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"46.888345`", ",", "\<\"projection.mov\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.717788301601109*^9, 3.71778832328511*^9}, 
+   3.717788421092753*^9, 3.717788559247006*^9, 
+   3.7177889888085537`*^9},ExpressionUUID->"d0c3a5dd-7f32-4661-93e8-\
+eada4c9d4885"]
+}, Open  ]]
+},
+WindowSize->{1222, 851},
+WindowMargins->{{51, Automatic}, {Automatic, 5}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 27, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 8689, 202, 551, "Input", "ExpressionUUID" -> \
+"8c32fcee-4b82-4345-bbc5-a0f1c749ce11"],
+Cell[CellGroupData[{
+Cell[9272, 226, 8870, 199, 732, "Input", "ExpressionUUID" -> \
+"9995d2e3-7b2c-43a2-a413-d1ec580ec305"],
+Cell[18145, 427, 301, 6, 32, "Output", "ExpressionUUID" -> \
+"d0c3a5dd-7f32-4661-93e8-eada4c9d4885"]
+}, Open  ]]
+}
+]
+*)
+
